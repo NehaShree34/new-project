@@ -1,0 +1,16 @@
+
+<div>
+  <input type="file" (change)="onFileChange($event)" [disabled]="images.length >= 5" />
+</div>
+
+<div class="grid">
+  <div *ngFor="let img of images"
+       class="img-box"
+       [class.selected]="img.id === selectedImageId"
+       (click)="selectImage(img.id)">
+    <img [src]="imageService.getImageUrl(img.id)" />
+    <p>{{ img.fileName }}</p>
+  </div>
+</div>
+
+<button (click)="deleteSelectedImage()" [disabled]="!selectedImageId">Delete Selected</button>

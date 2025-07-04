@@ -1,0 +1,23 @@
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.img-box {
+  border: 2px solid transparent;
+  padding: 5px;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+}
+
+.img-box.selected {
+  border-color: red;
+}
+
+.img-box img {
+  max-width: 100%;
+  height: auto;
+}
